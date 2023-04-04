@@ -48,8 +48,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                       const SizedBox(
                         height: 20,
                       ),
-                      Text("welcome to my Aalu app, kahela \n baneyra sakni ho",
-                          style: kBodyText1)
+                      Text("hiii hello by bye", style: kBodyText1)
                     ],
                   ),
                   Column(
@@ -68,8 +67,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                       const SizedBox(
                         height: 20,
                       ),
-                      Text("welcome to my Aalu app, kahela \n baneyra sakni ho",
-                          style: kBodyText1)
+                      Text(" hiii hello by bye", style: kBodyText1)
                     ],
                   ),
                   Column(
@@ -88,8 +86,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                       const SizedBox(
                         height: 20,
                       ),
-                      Text("welcome to my Aalu app, kahela \n baneyra sakni ho",
-                          style: kBodyText1)
+                      Text("hiii hello by bye", style: kBodyText1)
                     ],
                   ),
                 ],
@@ -125,7 +122,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                               context,
                               MaterialPageRoute(
                                 builder: (context) {
-                                  return BottomNavBar();
+                                  return const MainPanel();
                                 },
                               ),
                             );

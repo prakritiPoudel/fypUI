@@ -1,8 +1,6 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sp_ui/widgets/styles.dart';
+import 'package:sp_ui/view/swimmingPages.dart';
 
 class SportItems extends StatelessWidget {
   final List sImages = [
@@ -23,6 +21,9 @@ class SportItems extends StatelessWidget {
     "Skating\nHall",
     "VolleyBall"
   ];
+  final List sRoutes = [
+    Swimming(),
+  ];
 
   Widget build(BuildContext context) {
     return Column(
@@ -37,7 +38,12 @@ class SportItems extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) {
                   return InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => sRoutes[index]));
+                      },
                       child: Container(
                         height: 90,
                         color: const Color.fromARGB(255, 119, 201, 216)

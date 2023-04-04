@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:sp_ui/screen/onboarding_page.dart';
-
+import 'package:flutter/services.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:sp_ui/view/bottomsheets.dart';
+import 'package:sp_ui/view/desc.dart';
+import 'package:sp_ui/view/home.dart';
+import 'package:sp_ui/view/onboarding_page.dart';
+import 'package:sp_ui/widgets/theme.dart';
+import 'constant.dart';
 import 'homePage_section/bottomNavBar.dart';
 
-void main() {
+Future main() async {
+  await dotenv.load(fileName: Constant.dotFile);
   runApp(const MyApp());
 }
 
@@ -16,10 +23,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const OnboardingPage(),
+      //theme: ThemeData(primaryColor: Colors.blue, brightness: Brightness.light),
+      theme: Themes.light,
+      darkTheme: Themes.dark,
+
+      themeMode: ThemeMode.light,
+
+      // home: const OnboardingPage(),
+      home: const MainPanel(),
     );
   }
 }
